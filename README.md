@@ -20,7 +20,7 @@ Before running the application, ensure you have Python installed on your system.
    ```
 2. Navigate to the application directory:
    ```bash
-   cd text-embedding-manager
+   cd Text_Embedding_Manager
    ```
 3. Install the required Python packages:
    ```bash
