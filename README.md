@@ -7,7 +7,7 @@ The Text Embedding Manager is a tool designed for attorneys, activists, and anyo
 - **Text Collection:** Automatically collects and aggregates text data from .txt files within a user-specified directory.
 - **Sentence Embedding Generation:** Uses a pretrained Sentence Transformer model ('all-MiniLM-L6-v2') to generate sentence embeddings for nuanced understanding and analysis of textual content.
 - **Data Persistence:** Allows users to save and load processed data in a pickle format for easy data management and analysis continuation.
-- **Semantic Search:** Provides the capability to find and save the closest semantic matches to a given search phrase within the collected data, facilitating the discovery of relevant information quickly. The results are saved to a CSV file, sorted by the filepaths based on the related content's semantic proximity to the target sentence.
+- **Semantic Search:** Provides the capability to find and save the closest semantic matches to a given search phrase within the collected data, facilitating discovery of relevant information quickly. The results are saved to a CSV file, sorted by the filepaths based on the textual content's semantic proximity to the target sentence.
 - **GUI Interface:** Features a user-friendly graphical interface that simplifies the management of text embeddings and the search process, making advanced data analysis accessible to non-technical users.
 
 ## Installation
