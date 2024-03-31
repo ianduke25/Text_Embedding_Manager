@@ -1,6 +1,6 @@
 # Text Embedding Manager
 
-The Text Embedding Manager is a tool designed for attorneys, activists, and anyone needing to analyze and understand large corpuses of textual data efficiently. By leveraging advanced machine learning techniques, this application allows users to search for sentences semantically similar to a given target sentence-- allowing fast, automated sifting through extensive collections of documents such as body camera transcripts, jail calls, and other significant textual datasets.
+The Text Embedding Manager is a tool designed for attorneys, activists, and anyone needing to analyze and understand large corpuses of textual data efficiently. By leveraging advanced machine learning techniques, this application allows users to search for sentences semantically similar to a given target sentence-- allowing fast, automated sifting through extensive collections of documents such as body camera transcripts, jail call transcripts, and other large textual datasets.
 
 ## Features
 
