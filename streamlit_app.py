@@ -12,26 +12,48 @@ from nltk.tokenize import sent_tokenize
 nltk.download('punkt')
 from pathlib import Path
 
-# Streamlit configuration for a light theme and custom title
+# Streamlit configuration for custom theme and styles
 st.set_page_config(page_title="Text Embedding Manager", layout="centered")
 
-# CSS for a more polished look
-st.markdown("""
-    <style>
-    .stButton > button {
-        background-color: #4CAF50;
-        color: white;
-    }
-    .stProgress > div > div {
-        background-color: #4CAF50;
-    }
-    </style>
-    """, unsafe_allow_html=True)
+def set_css():
+    st.markdown(
+        """
+        <style>
+        html, body, [class*="css"] {
+            font-family: 'Open Sans', sans-serif;
+            color: black;
+            background-color: #f8f9fa;
+            line-height: 1.5;
+        }
+        .stTextInput > div > div > input {
+            background-color: #fff;
+            color: black;
+            border-radius: 0;
+            border: 1px solid black;
+        }
+        .stDownloadButton>button {
+            background-color: #f8f9fa;
+            color: black;
+            font-family: 'Open Sans', sans-serif;
+            border-radius: 0;
+            border: 1px solid black;
+        }
+        .stButton > button {
+            border-radius: 0;
+            border: 1px solid #f8f9fa;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
+
+set_css()
 
 # Title and introduction
+st.markdown("[Back to Equalysis](https://www.equalysis.org)", unsafe_allow_html=True)
 st.title("Text Embedding Manager")
 st.subheader("A streamlined tool for creating, searching, and managing text embeddings")
-st.write("Use this app to upload text files, generate sentence embeddings, and find similar sentences. Enjoy a light theme and a refined layout for ease of use.")
+st.write("Use this app to upload text files, generate sentence embeddings, and locate sentences with semantic proximity.")
 
 # Class containing functions needed to create sentence embeddings
 class TextEmbeddingManager:
