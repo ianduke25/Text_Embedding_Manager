@@ -52,7 +52,6 @@ set_css()
 # Title and introduction
 st.markdown("[Back to Equalysis](https://www.equalysis.org)", unsafe_allow_html=True)
 st.title("Text Embedding Manager")
-st.subheader("A streamlined tool for creating, searching, and managing text embeddings")
 st.write("Use this app to upload text files, generate sentence embeddings, and locate sentences with semantic proximity.")
 
 # Class containing functions needed to create sentence embeddings
