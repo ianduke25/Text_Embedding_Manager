@@ -9,9 +9,8 @@ import streamlit as st
 from tqdm import tqdm
 import nltk
 from nltk.tokenize import sent_tokenize
-from pathlib import Path
-
 nltk.download('punkt')
+from pathlib import Path
 
 # Streamlit configuration for a light theme and custom title
 st.set_page_config(page_title="Text Embedding Manager", layout="centered")
