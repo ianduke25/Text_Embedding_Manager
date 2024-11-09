@@ -9,8 +9,12 @@ import streamlit as st
 from tqdm import tqdm
 import nltk
 from nltk.tokenize import sent_tokenize
-nltk.download('punkt')
 from pathlib import Path
+
+# Check if 'punkt' is already downloaded
+nltk_data_path = Path(nltk.data.path[0]) / "tokenizers" / "punkt"
+if not nltk_data_path.exists():
+    nltk.download("punkt")
 
 # Streamlit configuration for custom theme and styles
 st.set_page_config(page_title="Text Embedding Manager", layout="centered")
@@ -53,6 +57,9 @@ set_css()
 st.markdown("[Back to Equalysis](https://www.equalysis.org)", unsafe_allow_html=True)
 st.title("Text Embedding Manager")
 st.write("Use this app to upload text files, generate sentence embeddings, and locate sentences with semantic proximity.")
+
+# Add single line break
+st.markdown("<br>", unsafe_allow_html=True)
 
 # Class containing functions needed to create sentence embeddings
 class TextEmbeddingManager:
@@ -153,6 +160,9 @@ manager = TextEmbeddingManager()
 st.markdown("### Step 1: Upload Text Files")
 uploaded_files = st.file_uploader("Upload text files", type="txt", accept_multiple_files=True)
 
+# Add single line break
+st.markdown("<br>", unsafe_allow_html=True)
+
 st.markdown("### Step 2: Generate Sentence Embeddings")
 if st.button("Generate Embeddings"):
     if uploaded_files:
@@ -171,12 +181,18 @@ if st.button("Generate Embeddings"):
     else:
         st.error("Please upload text files to generate embeddings.")
 
+# Add single line break
+st.markdown("<br>", unsafe_allow_html=True)
+
 # Load data from pickle
 st.markdown("### Step 3: Load Existing Embeddings")
 uploaded_pickle = st.file_uploader("Load embeddings from a pickle file", type="pickle", help="Load pre-existing embeddings to avoid regenerating them.")
 if uploaded_pickle:
     manager.load_data_pickle(uploaded_pickle.read())
     st.success("Pickle data loaded successfully.")
+
+# Add single line break
+st.markdown("<br>", unsafe_allow_html=True)
 
 # Search and save closest sentences
 st.markdown("### Step 4: Search for Similar Sentences")
