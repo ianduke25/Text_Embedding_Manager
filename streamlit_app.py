@@ -56,7 +56,7 @@ set_css()
 # Title and introduction
 st.markdown("[Back to Equalysis](https://www.equalysis.org)", unsafe_allow_html=True)
 st.title("Text Embedding Manager")
-st.write("Use this app to upload text files, generate sentence embeddings, and locate sentences with semantic proximity.")
+st.write("Use this app to upload text files, generate sentence embeddings, and locate sentences with semantic relevance.")
 
 # Add single line break
 st.markdown("<br>", unsafe_allow_html=True)
@@ -158,7 +158,7 @@ manager = TextEmbeddingManager()
 
 # Define layout for directory input, embedding generation, and search
 st.markdown("### Step 1: Upload Text Files")
-uploaded_files = st.file_uploader("Upload text files", type="txt", accept_multiple_files=True)
+uploaded_files = st.file_uploader("Upload text files (skip to Step 3 if embeddings have already been generated)", type="txt", accept_multiple_files=True)
 
 # Add single line break
 st.markdown("<br>", unsafe_allow_html=True)
@@ -196,7 +196,7 @@ st.markdown("<br>", unsafe_allow_html=True)
 
 # Search and save closest sentences
 st.markdown("### Step 4: Search for Similar Sentences")
-target_sentence = st.text_input("Enter a target sentence to find closest matches", help="Enter a sentence to find its closest matches in your dataset.")
+target_sentence = st.text_input("Enter a target sentence to find sentences in dataset conveying similar meanings", help="Enter a sentence to find its closest matches in your dataset.")
 
 if st.button("Find Closest Sentences"):
     if target_sentence and manager.df is not None:
